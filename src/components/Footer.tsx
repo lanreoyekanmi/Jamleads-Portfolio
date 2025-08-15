@@ -34,7 +34,7 @@ const Footer = () => {
               <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Adetunji Ogunyemi</h3>
               <p className="text-lg text-white/80 mb-3">Project Manager CAPM®</p>
               <div className="flex items-center justify-center gap-4 mb-3">
-                <a href="https://linkedin.com/in/ogunyemiadetunji" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition">
+                <a href="https://www.linkedin.com/in/jamleads/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition">
                   <Linkedin className="w-6 h-6" />
                 </a>
                 <a href="https://x.com/ogunyemiadetunji" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition">
@@ -54,6 +54,14 @@ const Footer = () => {
       {/* Floating Back to Top */}
       <a href="#top" className="fixed right-8 bottom-8 bg-white text-black rounded-full shadow-lg w-12 h-12 flex items-center justify-center text-2xl hover:bg-primary hover:text-white transition z-50" aria-label="Back to top">
         ↑
+      </a>
+      {/* Floating Become a Client Button */}
+      <a
+        href="mailto:ogunyemiadetunji17@gmail.com"
+        className="fixed left-8 bottom-8 bg-lime-400 text-black rounded-full shadow-lg px-8 py-4 flex items-center justify-center text-lg font-semibold hover:bg-lime-500 transition z-50 border-2 border-black"
+        style={{ boxShadow: '0 0 40px 0 #84cc16aa' }}
+      >
+        Become a Client
       </a>
     </footer>
   );
