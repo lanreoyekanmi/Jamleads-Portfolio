@@ -23,8 +23,8 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
       isScrolled
-        ? 'opacity-0 pointer-events-none bg-background/95 backdrop-blur-md border-b border-border'
-        : 'opacity-100 bg-transparent pointer-events-auto'
+        ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-md'
+        : 'bg-transparent'
     }`}>
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -77,42 +77,40 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border">
-            <div className="flex flex-col space-y-4">
-              {navItems.map((item) => (
-                item.href.startsWith('/') ? (
-                  <Link
-                    key={item.label}
-                    to={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </Link>
-                ) : (
-                  <a
-                    key={item.label}
-                    href={item.href}
-                    className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.label}
-                  </a>
-                )
-              ))}
-              <div className="pt-4 border-t border-border">
-                <p className="text-muted-foreground text-sm mb-3">
-                  Email: ogunyemiadetunji17@gmail.com
-                </p>
-                <a
-                  href="https://jamleads.framer.website/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-outline-professional text-sm py-2 px-4"
+          <div className="md:hidden fixed inset-0 top-16 left-0 w-full bg-[#111]/95 backdrop-blur-lg border-t border-border z-50 flex flex-col px-6 py-8 space-y-6">
+            {navItems.map((item) => (
+              item.href.startsWith('/') ? (
+                <Link
+                  key={item.label}
+                  to={item.href}
+                  className="text-2xl text-foreground hover:text-primary transition-colors duration-300 font-semibold"
+                  onClick={() => setIsMenuOpen(false)}
                 >
-                  My Resume
+                  {item.label}
+                </Link>
+              ) : (
+                <a
+                  key={item.label}
+                  href={item.href}
+                  className="text-2xl text-foreground hover:text-primary transition-colors duration-300 font-semibold"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {item.label}
                 </a>
-              </div>
+              )
+            ))}
+            <div className="pt-6 border-t border-border">
+              <p className="text-muted-foreground text-base mb-4">
+                Email: ogunyemiadetunji17@gmail.com
+              </p>
+              <a
+                href="https://www.canva.com/design/DAGeNjN5Bvw/X8F8YSqc6Xguynba9rrkZA/edit?utm_content=DAGeNjN5Bvw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-outline-professional text-base py-3 px-6 w-full block text-center"
+              >
+                My Resume
+              </a>
             </div>
           </div>
         )}
