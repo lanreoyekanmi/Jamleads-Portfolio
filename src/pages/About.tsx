@@ -30,7 +30,7 @@ const AboutPage = () => {
           />
           {/* Social Icons */}
           <div className="flex items-center gap-3 mb-4">
-            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+            <a href="https://www.linkedin.com/in/jamleads" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
               <span className="sr-only">LinkedIn</span>
               <Linkedin className="w-6 h-6 text-white/80 hover:text-white" />
             </a>
