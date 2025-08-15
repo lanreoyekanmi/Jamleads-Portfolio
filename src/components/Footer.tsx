@@ -55,14 +55,6 @@ const Footer = () => {
       <a href="#top" className="fixed right-8 bottom-8 bg-white text-black rounded-full shadow-lg w-12 h-12 flex items-center justify-center text-2xl hover:bg-primary hover:text-white transition z-50" aria-label="Back to top">
         ↑
       </a>
-      {/* Floating Become a Client Button */}
-      <a
-        href="mailto:ogunyemiadetunji17@gmail.com"
-        className="fixed left-8 bottom-8 bg-lime-400 text-black rounded-full shadow-lg px-8 py-4 flex items-center justify-center text-lg font-semibold hover:bg-lime-500 transition z-50 border-2 border-black"
-        style={{ boxShadow: '0 0 40px 0 #84cc16aa' }}
-      >
-        Become a Client
-      </a>
     </footer>
   );
 };
