@@ -1,114 +1,75 @@
-import { useEffect } from 'react';
-import { Award, Users, Target, Zap } from 'lucide-react';
-import AOS from 'aos';
+
+
+import { Linkedin, X } from 'lucide-react';
 import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import StatsSection from '@/components/StatsSection';
+import Navigation from '@/components/Navigation';
+
 
 const AboutPage = () => {
-  useEffect(() => {
-    AOS.init({
-      duration: 1000,
-      once: true,
-      easing: 'ease-out-cubic'
-    });
-  }, []);
-
-  const highlights = [
-    {
-      icon: Award,
-      title: "CAPM® Certified",
-      description: "Certified Associate in Project Management by PMI"
-    },
-    {
-      icon: Users,
-      title: "Team Leadership",
-      description: "Led cross-functional teams across North America and Europe"
-    },
-    {
-      icon: Target,
-      title: "Results-Driven",
-      description: "100% client retention rate with 25+ successful projects"
-    },
-    {
-      icon: Zap,
-      title: "Agile Expert",
-      description: "Recognized as a top voice in Agile Scrum methodology"
-    }
-  ];
-
   return (
     <>
-      <main className="min-h-screen">
-        <section className="py-20 px-6 relative">
-        <div className="absolute inset-0 z-0">
-          <img 
-            src="/background.png" 
-            alt="Background Pattern" 
-            className="w-full h-full object-cover opacity-10"
+      <Navigation />
+      <main className="min-h-screen bg-[#111] text-white">
+      <section className="container mx-auto px-4 sm:px-6 py-16 sm:py-24 flex flex-col gap-12 sm:gap-16 lg:flex-row lg:items-start lg:gap-0 relative">
+        {/* Left Side */}
+        <div className="flex flex-col items-center sm:items-center lg:items-start w-full lg:w-1/2 mb-8 sm:mb-12 lg:mb-0 lg:sticky lg:top-12 lg:self-start z-20">
+          {/* Only sticky on large screens, not on mobile */}
+          {/* Available for work */}
+          <div className="flex items-center mb-6">
+            <span className="inline-block w-3 h-3 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+            <span className="text-lg font-medium">Available for work</span>
+          </div>
+          {/* Profile Image */}
+          <img
+            src="/profile.jpg"
+            alt="Profile"
+            className="w-28 h-28 rounded-full object-cover border-4 border-[#222] mb-4"
+            draggable="false"
           />
+          {/* Social Icons */}
+          <div className="flex items-center gap-3 mb-4">
+            <a href="#" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <span className="sr-only">LinkedIn</span>
+              <Linkedin className="w-6 h-6 text-white/80 hover:text-white" />
+            </a>
+            <a href="https://x.com/adetunjijay" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+              <span className="sr-only">X</span>
+              <X className="w-6 h-6 text-white/80 hover:text-white" />
+            </a>
+          </div>
+          {/* Not to brag, but.. */}
+          <div className="text-left w-full max-w-xs">
+            <h3 className="text-2xl font-semibold mb-2">Not to brag, but..</h3>
+            <p className="text-lg font-light leading-snug">
+              I’m dedicated to providing innovative, high-quality solutions that not only meet your goals but exceed your expectations.
+            </p>
+          </div>
         </div>
-        <div className="container mx-auto relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            {/* Content */}
-            <div data-aos="fade-right">
-              <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-12 bg-gradient-to-r from-primary to-[hsl(88,60%,45%)] bg-clip-text text-transparent tracking-tight">
-                About Me
-              </h2>
-              <div className="space-y-8 text-muted-foreground/90 leading-relaxed text-xl">
-                <p className="text-xl md:text-2xl font-light">
-                  As a CAPM®-certified Project Manager with a background in software development, 
-                  I bring clarity and structure to complex projects. Recognized as a top voice in 
-                  Agile Scrum, I've successfully led product and project teams across North America 
-                  and Europe.
-                </p>
-                <p className="text-xl md:text-2xl font-light">
-                  My expertise spans FinTech, EduTech, and AI solutions, where I've consistently 
-                  delivered projects that exceed expectations. I combine technical knowledge with 
-                  strategic thinking to ensure seamless project execution and optimal results.
-                </p>
-                <p className="text-xl md:text-2xl font-light">
-                  I'm also passionate about teaching and community building. Through creating 
-                  online courses and fostering a thriving project management community, I help 
-                  others grow in their careers while staying at the forefront of industry trends.
-                </p>
-              </div>
-
-              <div className="mt-8">
-                <a 
-                  href="#projects" 
-                  className="inline-flex items-center px-8 py-4 rounded-full text-background font-medium transition-all duration-300 bg-gradient-to-r from-primary to-[hsl(88,60%,45%)] hover:shadow-[0_0_30px_rgba(132,204,22,0.4)] hover:scale-105"
-                >
-                  See what I can do
-                  <span className="ml-2 transform group-hover:translate-x-1">→</span>
-                </a>
-              </div>
-            </div>
-
-            {/* Highlights Grid */}
-            <div className="space-y-6" data-aos="fade-left">
-              {highlights.map((item, index) => (
-                <div
-                  key={index}
-                  className="flex items-start space-x-4 p-6 bg-background/50 backdrop-blur-sm rounded-2xl border border-border/50 shadow-lg hover:shadow-primary/20 transition-all duration-300 group"
-                  data-aos="fade-up"
-                  data-aos-delay={index * 150}
-                >
-                  <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center group-hover:bg-primary/20 transition-colors duration-300">
-                    <item.icon className="w-6 h-6 text-primary" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-semibold text-foreground mb-3">{item.title}</h3>
-                    <p className="text-base text-muted-foreground/90">{item.description}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
+        {/* Right Side */}
+        <div className="flex-1 flex flex-col justify-center items-start w-full">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-10 leading-tight">About me</h1>
+          <div className="text-base sm:text-lg md:text-2xl font-light leading-relaxed max-w-full sm:max-w-2xl space-y-4 sm:space-y-6">
+            <p className="mb-6">
+              Hi, I'm Adetunji, an <span className="font-bold">IT PROJECT MANAGER</span> with over 6 years of experience in <span className="font-bold">SOFTWARE DEVELOPMENT</span>. I have a strong blend of technical expertise and I excel in leading initiatives that leverage innovative technology like AI &amp; ML to achieve business objectives and deliver impactful solutions
+            </p>
+            <p className="mb-6">
+              Over the years, I’ve had the opportunity to work with a diverse range of clients, from startups to established brands, helping them bring their visions to life digitally.
+            </p>
+            <p>
+              Let’s create something amazing together!
+            </p>
+          </div>
+          {/* Contact section on the right */}
+          <div className="w-full mt-8 sm:mt-12 flex flex-col gap-6 sm:gap-8">
+            <ContactSection />
           </div>
         </div>
       </section>
+        <StatsSection />
+        <Footer />
       </main>
-      <div className="mt-24">
-        <ContactSection />
-      </div>
     </>
   );
 };

@@ -24,7 +24,7 @@ const StatsSection = () => {
   const marqueeStats = [...stats, ...stats];
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 sm:px-6 bg-card relative overflow-x-hidden" data-aos="fade-up">
+    <section ref={sectionRef} className="py-20 px-4 sm:px-6 bg-card relative overflow-x-hidden">
       <div className="container mx-auto">
         {/* Horizontal Marquee Stats Slider */}
         <div className="relative w-full flex items-center justify-center">

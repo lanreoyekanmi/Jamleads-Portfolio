@@ -57,7 +57,7 @@ const Navigation = () => {
               Email: ogunyemiadetunji17@gmail.com
             </span>
             <a
-              href="https://jamleads.framer.website/"
+              href="https://www.canva.com/design/DAGeNjN5Bvw/X8F8YSqc6Xguynba9rrkZA/edit?utm_content=DAGeNjN5Bvw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
               target="_blank"
               rel="noopener noreferrer"
               className="btn-outline-professional text-sm py-2 px-4"
