@@ -45,7 +45,7 @@ const Hero = () => {
                   <h3 className="text-2xl font-semibold text-white leading-tight mb-3">Adetunji Ogunyemi</h3>
                   <p className="text-neutral-300 text-base mb-4">Project Manager CAPM®</p>
                   <div className="flex space-x-3">
-                    <a href="#" className="text-neutral-300 hover:text-lime-400 transition-colors">
+                    <a href="https://www.linkedin.com/in/jamleads/" className="text-neutral-300 hover:text-lime-400 transition-colors">
                       <Linkedin size={22} />
                     </a>
                     <a href="https://x.com/adetunjijay" className="text-neutral-300 hover:text-lime-400 transition-colors">
