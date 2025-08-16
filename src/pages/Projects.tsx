@@ -58,19 +58,18 @@ const Projects = () => {
   return (
     <>
       <Navigation />
-      <section className="py-20 px-6 bg-background min-h-screen">
+      <section className="py-10 sm:py-20 px-2 sm:px-6 bg-background min-h-screen">
         <div className="container mx-auto">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6 flex flex-col items-center gap-4">
-            
+          <div className="text-center mb-10 sm:mb-16" data-aos="fade-up">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold text-foreground mb-4 sm:mb-6 flex flex-col items-center gap-2 sm:gap-4">
               <div className="flex flex-row items-center gap-2 mt-2">
                 <span className="w-3 h-3 rounded-full bg-lime-500 animate-pulse block"></span>
-                <span className="text-base text-white opacity-80 font-medium">My recent projects</span>
+                <span className="text-sm sm:text-base text-white opacity-80 font-medium">My recent projects</span>
               </div>
               <span className="mt-2">Let's explore!</span>
             </h2>
           </div>
-          <div className="flex flex-col gap-y-16">
+          <div className="flex flex-col gap-y-8 sm:gap-y-16">
             {projects.map((project, index) => (
               <div
                 key={index}
@@ -78,10 +77,10 @@ const Projects = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <h3 className="text-2xl md:text-3xl font-light text-foreground mb-2 tracking-tight">
+                <h3 className="text-lg sm:text-2xl md:text-3xl font-light text-foreground mb-2 tracking-tight">
                   {project.title}
                 </h3>
-                <p className="text-base text-muted-foreground mb-3">{project.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground mb-3">{project.description}</p>
                 <div className="w-full rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3">
                   <video
                     src={project.video}

@@ -29,10 +29,10 @@ const Navigation = () => {
         ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-md'
         : 'bg-transparent'
     }`}>
-      <div className="container mx-auto px-6 py-4">
-        <div className="flex items-center justify-between">
+      <div className="container mx-auto px-2 sm:px-6 py-4">
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-0">
           {/* Navigation Links */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-4 md:space-x-8">
             {navItems.map((item) => (
               item.href.startsWith('/') ? (
                 <Link
@@ -55,7 +55,7 @@ const Navigation = () => {
           </div>
 
           {/* Contact Info & Resume */}
-          <div className="hidden md:flex items-center space-x-6">
+          <div className="hidden md:flex items-center space-x-3 md:space-x-6">
             <span className="text-white text-sm">
               Email: ogunyemiadetunji17@gmail.com
             </span>
@@ -71,7 +71,7 @@ const Navigation = () => {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden p-2 text-foreground hover:text-primary transition-colors"
+            className="md:hidden p-2 text-foreground hover:text-primary transition-colors self-end"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
           >
             {isMenuOpen ? <X size={24} /> : <Menu size={24} />}

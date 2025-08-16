@@ -13,9 +13,9 @@ const Footer = () => {
         <path d="M0 320 Q360 220 720 320 T1440 320" stroke="#232325" strokeWidth="2" fill="none" />
         <path d="M0 220 Q360 120 720 220 T1440 220" stroke="#232325" strokeWidth="2" fill="none" />
       </svg>
-      <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-between gap-0 min-h-[420px] relative z-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-stretch justify-between gap-0 min-h-[420px] relative z-10 px-2 sm:px-0">
         {/* Left: Big headline */}
-        <div className="flex-1 flex flex-col justify-between p-10 md:p-16 border-r border-border/30">
+        <div className="flex-1 flex flex-col justify-between p-4 sm:p-10 md:p-16 border-r border-border/30 min-w-0">
           <div>
             <div className="flex items-center gap-3 mb-8">
               <span className="inline-block w-3 h-3 rounded-full bg-green-500 animate-pulse"></span>
@@ -27,12 +27,12 @@ const Footer = () => {
           </div>
         </div>
         {/* Right: Profile card */}
-        <div className="flex-1 flex flex-col justify-center items-center p-10 md:p-16 bg-black/80">
+        <div className="flex-1 flex flex-col justify-center items-center p-4 sm:p-10 md:p-16 bg-black/80 min-w-0">
           <div className="flex flex-col items-center gap-6">
-            <img src={profileImg} alt="Adetunji Ogunyemi" className="w-32 h-32 rounded-full object-cover border-4 border-white shadow-lg" />
+            <img src={profileImg} alt="Adetunji Ogunyemi" className="w-20 h-20 sm:w-32 sm:h-32 rounded-full object-cover border-4 border-white shadow-lg" />
             <div className="text-center">
-              <h3 className="text-2xl md:text-3xl font-bold text-white mb-1">Adetunji Ogunyemi</h3>
-              <p className="text-lg text-white/80 mb-3">Project Manager CAPM®</p>
+              <h3 className="text-lg sm:text-2xl md:text-3xl font-bold text-white mb-1">Adetunji Ogunyemi</h3>
+              <p className="text-base sm:text-lg text-white/80 mb-3">Project Manager CAPM®</p>
               <div className="flex items-center justify-center gap-4 mb-3">
                 <a href="https://www.linkedin.com/in/jamleads/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-primary transition">
                   <Linkedin className="w-6 h-6" />
@@ -47,7 +47,7 @@ const Footer = () => {
         </div>
       </div>
       {/* Bottom: Copyright and developer */}
-      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-4 py-4 border-t border-border/30 mt-0 relative z-10">
+      <div className="container mx-auto flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4 py-4 border-t border-border/30 mt-0 relative z-10 px-2 sm:px-0">
         <div className="text-white/70 text-sm">&copy; {new Date().getFullYear()} All rights reserved</div>
         <div className="text-white/80 text-sm">Developed by <span className="font-semibold"><a href='https://github.com/lanreoyekanmi'>Olanrewaju</a></span></div>
       </div>
