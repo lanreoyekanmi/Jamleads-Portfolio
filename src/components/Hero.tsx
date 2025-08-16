@@ -31,41 +31,36 @@ const Hero = () => {
       <div className="container mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-[340px_1fr] gap-6 lg:gap-12 items-stretch min-h-[60vh]">
           {/* Profile Section */}
-          <div className="flex flex-col items-start justify-center h-full mb-8 lg:mb-0" data-aos="fade-up">
-            <div>
-              <div className="flex flex-col sm:flex-row items-center mb-6 gap-4 sm:gap-0">
-                <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary shadow-glow">
-                  <img
-                    src="https://framerusercontent.com/images/95HJRg2FTdKwLXvY3RQ1icJj210.jpg?scale-down-to=512"
-                    alt="Adetunji Ogunyemi"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="sm:ml-4 flex flex-col justify-center mt-4 sm:mt-0">
-                  <h3 className="text-2xl font-semibold text-white leading-tight mb-3">Adetunji Ogunyemi</h3>
-                  <p className="text-neutral-300 text-base mb-4">Project Manager CAPM®</p>
-                  <div className="flex space-x-3">
-                    <a 
-                      href="https://www.linkedin.com/in/jamleads/" 
-                      className="text-neutral-300 hover:text-lime-400 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <Linkedin size={22} />
-                    </a>
-                    <a 
-                      href="https://x.com/adetunjijay" 
-                      className="text-neutral-300 hover:text-lime-400 transition-colors"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                    >
-                      <TwitterX size={28} />
-                    </a>
-                  </div>
-                </div>
+          <div className="flex flex-row items-center justify-start h-full mb-6 lg:mb-0" data-aos="fade-up">
+            <div className="w-20 h-20 rounded-full overflow-hidden border-4 border-primary shadow-glow flex-shrink-0">
+              <img
+                src="https://framerusercontent.com/images/95HJRg2FTdKwLXvY3RQ1icJj210.jpg?scale-down-to=512"
+                alt="Adetunji Ogunyemi"
+                className="w-full h-full object-cover"
+              />
+            </div>
+            <div className="ml-4 flex flex-col justify-center">
+              <h3 className="text-lg sm:text-2xl font-semibold text-white leading-tight mb-1 sm:mb-3">Adetunji Ogunyemi</h3>
+              <p className="text-neutral-300 text-sm sm:text-base mb-2 sm:mb-4">Project Manager CAPM®</p>
+              <div className="flex space-x-2 sm:space-x-3">
+                <a 
+                  href="https://www.linkedin.com/in/jamleads/" 
+                  className="text-neutral-300 hover:text-lime-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Linkedin size={20} />
+                </a>
+                <a 
+                  href="https://x.com/adetunjijay" 
+                  className="text-neutral-300 hover:text-lime-400 transition-colors"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <TwitterX size={24} />
+                </a>
               </div>
-              <div className="h-24"></div>
-              <div className="text-lg text-white font-semibold tracking-wide">(2019 – PRESENT)</div>
+              <div className="text-xs sm:text-lg text-white font-semibold tracking-wide mt-2">(2019 – PRESENT)</div>
             </div>
           </div>
 
