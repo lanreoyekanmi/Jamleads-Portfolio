@@ -6,39 +6,39 @@ import AOS from 'aos';
 
 const projects = [
   {
-    title: "Hekto",
+      title: "Hekto",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SV2kQgK3qAJOdopvl9f6Te0nGXVYKEtFUQPh3",
     link: "https://ecommerce-react-app-ashy.vercel.app/"
   },
   {
     title: "Gig zeal",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SCj5Cn9Ksq1N0OW3AibZc2rRxJeSTf79LjdCF",
-    link: "#"
+    link: "https://gigzeal.com/home-4/"
   },
   {
     title: "KingdomHealth Mobile",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SWcCEAhICn6cBs4NXh10FariduSAPEkb9yMQV",
-    link: "#"
+    link: "https://kingdomhealthmobile.vercel.app/"
   },
   {
     title: "Forex Trading App",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SAMjhc7X16vUTrDPjMZ8wRWodqahlNx2eC9GH",
-    link: "#"
+    link: "https://forex-app-main.vercel.app/"
   },
   {
     title: "FixMaster",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SKPGVVtkR9bHnsDy4i2P8gVTU1CuXowfI6BdZ",
-    link: "#"
+    link: "https://fixmaster.com.ng/"
   },
   {
     title: "PsychInsights",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SnnYJBdAZAJIdLTfSpM329Gg8DOPbq14FioXz",
-    link: "#"
+    link: "https://psychinsightsapp.com/"
   },
   {
     title: "AI Agent: Phone Agent",
     video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SjRqvwEQKrDuYL1t26f7CjbFIX4qP0MhJHZdS",
-    link: "#"
+    link: "https://creator.voiceflow.com/prototype/6800a873503fdd626caa976c"
   }
 ];
 
