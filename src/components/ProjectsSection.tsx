@@ -47,10 +47,6 @@ const ProjectsSection = () => {
   return (
     <section id="projects" className="py-20 px-6 bg-background">
       <div className="container mx-auto">
-        <div className="text-center mb-16" data-aos="fade-up">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Projects
-          </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
           {projects.map((project, index) => (
