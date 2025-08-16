@@ -20,8 +20,11 @@ const Navigation = () => {
     { label: 'About & Contact', href: '/about' }
   ];
 
+  // Only show nav when not scrolled
+  if (isScrolled) return null;
+
   return (
-    <nav className={`fixed top-0 w-full z-50 transition-all duration-500 ${
+    <nav className={`w-full z-50 transition-all duration-500 ${
       isScrolled
         ? 'bg-background/95 backdrop-blur-md border-b border-border shadow-md'
         : 'bg-transparent'
@@ -35,7 +38,7 @@ const Navigation = () => {
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  className="text-white hover:text-white transition-colors duration-300 font-medium border-b-2 border-transparent hover:border-white"
                 >
                   {item.label}
                 </Link>
@@ -43,7 +46,7 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-foreground hover:text-primary transition-colors duration-300 font-medium"
+                  className="text-white hover:text-white transition-colors duration-300 font-medium border-b-2 border-transparent hover:border-white"
                 >
                   {item.label}
                 </a>
@@ -53,14 +56,14 @@ const Navigation = () => {
 
           {/* Contact Info & Resume */}
           <div className="hidden md:flex items-center space-x-6">
-            <span className="text-muted-foreground text-sm">
+            <span className="text-white text-sm">
               Email: ogunyemiadetunji17@gmail.com
             </span>
             <a
-              href="https://www.canva.com/design/DAGeNjN5Bvw/X8F8YSqc6Xguynba9rrkZA/edit?utm_content=DAGeNjN5Bvw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+              href="/Adetunji Ogunyemi Product Manager Resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
-              className="btn-outline-professional text-sm py-2 px-4"
+              className="btn-outline-professional text-sm py-2 px-4 text-white border-white"
             >
               My Resume
             </a>
@@ -77,13 +80,13 @@ const Navigation = () => {
 
         {/* Mobile Menu */}
         {isMenuOpen && (
-          <div className="md:hidden fixed inset-0 top-16 left-0 w-full bg-[#111]/95 backdrop-blur-lg border-t border-border z-50 flex flex-col px-6 py-8 space-y-6">
+          <div className="md:hidden fixed inset-0 top-16 left-0 w-full bg-[#111]/95 backdrop-blur-lg border-t border-white z-50 flex flex-col px-6 py-8 space-y-6">
             {navItems.map((item) => (
               item.href.startsWith('/') ? (
                 <Link
                   key={item.label}
                   to={item.href}
-                  className="text-2xl text-foreground hover:text-primary transition-colors duration-300 font-semibold"
+                  className="text-2xl text-white hover:text-white transition-colors duration-300 font-semibold border-b-2 border-transparent hover:border-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
@@ -92,22 +95,22 @@ const Navigation = () => {
                 <a
                   key={item.label}
                   href={item.href}
-                  className="text-2xl text-foreground hover:text-primary transition-colors duration-300 font-semibold"
+                  className="text-2xl text-white hover:text-white transition-colors duration-300 font-semibold border-b-2 border-transparent hover:border-white"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
               )
             ))}
-            <div className="pt-6 border-t border-border">
-              <p className="text-muted-foreground text-base mb-4">
+            <div className="pt-6 border-t border-white">
+              <p className="text-white text-base mb-4">
                 Email: ogunyemiadetunji17@gmail.com
               </p>
               <a
-                href="https://www.canva.com/design/DAGeNjN5Bvw/X8F8YSqc6Xguynba9rrkZA/edit?utm_content=DAGeNjN5Bvw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton"
+                href="/Adetunji Ogunyemi Product Manager Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="btn-outline-professional text-base py-3 px-6 w-full block text-center"
+                className="btn-outline-professional text-base py-3 px-6 w-full block text-center text-white border-white"
               >
                 My Resume
               </a>

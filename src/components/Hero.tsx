@@ -45,13 +45,20 @@ const Hero = () => {
                   <h3 className="text-2xl font-semibold text-white leading-tight mb-3">Adetunji Ogunyemi</h3>
                   <p className="text-neutral-300 text-base mb-4">Project Manager CAPM®</p>
                   <div className="flex space-x-3">
-                    <a href="https://www.linkedin.com/in/jamleads/" className="text-neutral-300 hover:text-lime-400 transition-colors">
-                      <Linkedin size={22} 
+                    <a 
+                      href="https://www.linkedin.com/in/jamleads/" 
+                      className="text-neutral-300 hover:text-lime-400 transition-colors"
                       target="_blank"
-                        />
+                      rel="noopener noreferrer"
+                    >
+                      <Linkedin size={22} />
                     </a>
-                    <a href="https://x.com/adetunjijay" className="text-neutral-300 hover:text-lime-400 transition-colors">
-                       target="_blank"
+                    <a 
+                      href="https://x.com/adetunjijay" 
+                      className="text-neutral-300 hover:text-lime-400 transition-colors"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       <TwitterX size={28} />
                     </a>
                   </div>
@@ -63,19 +70,19 @@ const Hero = () => {
           </div>
 
           {/* Main Content */}
-          <div className={`flex flex-col items-start justify-center transition-all duration-500 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`} data-aos="fade-up">
-            <h1 className="text-5xl md:text-7xl font-bold text-white mb-10 leading-[1.08] tracking-tight text-left">
+          <div className={`flex flex-col items-start justify-center transition-all duration-500 mt-12 ${isScrolled ? 'opacity-0 pointer-events-none' : 'opacity-100 pointer-events-auto'}`} data-aos="fade-up">
+            <h1 className="text-5xl md:text-7xl font-bold text-white mb-3 leading-[1.08] tracking-tight text-left">
               Hi! I'm Adetunji
             </h1>
-            <div className="flex flex-col gap-6 mb-10 w-full max-w-2xl">
-              <div className="inline-block bg-neutral-800/90 rounded-full px-8 py-4 text-2xl font-semibold text-white shadow-md">
+            <div className="flex flex-col gap-2 mb-3 w-full max-w-2xl">
+              <div className="inline-block bg-neutral-800/90 rounded-[48px] px-10 py-3 text-2xl font-bold text-white shadow-md w-[600px] h-[70px] flex items-center justify-center">
                 IT Project Manager CAPM®
               </div>
-              <div className="inline-block border-2 border-white rounded-full px-8 py-4 text-2xl font-semibold text-white shadow-md">
+              <div className="inline-block border-2 border-white rounded-[48px] px-10 py-3 text-2xl font-bold text-white shadow-md w-[600px] h-[70px] flex items-center justify-center">
                 Software Engineer | AI & ML
               </div>
             </div>
-            <p className="text-xl text-neutral-300 leading-relaxed max-w-2xl mb-10">
+            <p className="text-xl text-neutral-300 leading-relaxed max-w-2xl mb-6">
               As a CAPM®-certified Project Manager with a background in software development, 
               I bring clarity and structure to complex projects. Recognised as a top voice in 
               Agile Scrum, I've successfully led product and project teams across North America 
@@ -86,7 +93,7 @@ const Hero = () => {
             </p>
             <a
               href="#projects"
-              className="inline-flex items-center px-10 py-6 rounded-full text-lg font-medium bg-lime-400 text-black shadow-[0_0_40px_0_rgba(132,204,22,0.4)] hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-lime-300"
+              className="inline-flex items-center px-10 py-5 rounded-full text-lg font-medium bg-lime-400 text-black shadow-[0_0_40px_0_rgba(132,204,22,0.4)] hover:scale-105 transition-transform duration-300 focus:outline-none focus:ring-4 focus:ring-lime-300"
               style={{ boxShadow: '0 0 40px 0 #84cc16aa' }}
             >
               See what I can do

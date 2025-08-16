@@ -45,18 +45,17 @@ const projects = [
 
 const ProjectsSection = () => {
   return (
-    <section id="projects" className="py-20 px-6 bg-background">
+    <section id="projects" className="py-20 px-6 bg-background font-manrope text-[22px]">
       <div className="container mx-auto">
-        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-16">
           {projects.map((project, index) => (
             <div
               key={index}
-              className="flex flex-col items-start bg-transparent"
+              className="flex flex-col items-start bg-transparent font-manrope text-[22px]"
               data-aos="fade-up"
               data-aos-delay={index * 150}
             >
-              <h3 className="text-2xl md:text-3xl font-light text-foreground mb-2 tracking-tight">
+              <h3 className="text-2xl md:text-3xl font-light text-foreground mb-2 tracking-tight font-manrope text-[22px]">
                 {project.title}
               </h3>
               <div className="w-full rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3">
@@ -77,7 +76,7 @@ const ProjectsSection = () => {
                 href={project.link}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-4 py-1.5 text-xs font-medium rounded bg-primary text-white hover:bg-primary/80 transition-colors shadow"
+                className="inline-block px-4 py-1.5 text-xs font-medium rounded bg-primary text-white hover:bg-primary/80 transition-colors shadow font-manrope text-[22px]"
                 style={{ minWidth: 90 }}
               >
                 Learn More
