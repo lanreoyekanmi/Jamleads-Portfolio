@@ -9,7 +9,7 @@ const projects = [
   {
     title: "Hekto",
     description: "A modern e-commerce platform with a clean UI and seamless shopping experience.",
-    video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SV2kQgK3qAJOdopvl9f6Te0nGXVYKEtFUQPh3",
+        video: "https://eyby8gm0vc.ufs.sh/f/HgYPi2uNp42SV2kQgK3qAJOdopvl9f6Te0nGXVYKEtFUQPh3",
     link: "https://ecommerce-react-app-ashy.vercel.app/"
   },
   {
@@ -77,35 +77,39 @@ const Projects = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                <h3 className="text-lg sm:text-2xl md:text-3xl font-light text-foreground mb-2 tracking-tight">
+                    <h3 className="text-lg sm:text-2xl md:text-3xl font-light text-foreground mb-4 tracking-tight">
                   {project.title}
                 </h3>
-                <p className="text-sm sm:text-base text-muted-foreground mb-3">{project.description}</p>
-                <div className="w-full rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3">
-                  <video
-                    src={project.video}
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                    controlsList="nodownload noremoteplayback"
-                    disablePictureInPicture
-                    tabIndex={-1}
-                    onContextMenu={e => e.preventDefault()}
-                    preload="auto"
-                    style={{ display: 'block', width: '100%', borderRadius: '1.25rem', background: '#fff' }}
-                    className="w-full aspect-video object-cover"
-                  />
+                    <p className="text-sm sm:text-base text-muted-foreground mb-6">{project.description}</p>
+                <div className="w-full flex justify-center">
+                      <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3 max-w-5xl w-full">
+                    <video
+                      src={project.video}
+                      autoPlay
+                      loop
+                      muted
+                      playsInline
+                      controlsList="nodownload noremoteplayback"
+                      disablePictureInPicture
+                      tabIndex={-1}
+                      onContextMenu={e => e.preventDefault()}
+                      preload="auto"
+                      style={{ display: 'block', width: '100%', borderRadius: '1.25rem', background: '#fff' }}
+                      className="w-full aspect-video object-cover"
+                    />
+                  </div>
                 </div>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-block px-4 py-1.5 text-xs font-medium rounded bg-primary text-white hover:bg-primary/80 transition-colors shadow"
-                  style={{ minWidth: 90 }}
-                >
-                  Learn More
-                </a>
+                <div className="w-full flex justify-end">
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-block px-6 py-2 text-sm font-semibold rounded-full border border-gray-700 bg-gray-800 text-white hover:bg-gray-700 transition-colors shadow-none mt-4 -ml-1 mr-32"
+                    style={{ minWidth: 110 }}
+                  >
+                    Learn More
+                  </a>
+                </div>
               </div>
             ))}
           </div>
