@@ -21,35 +21,41 @@ const AboutPage = () => {
             <span className="inline-block w-3 h-3 rounded-full bg-green-400 mr-2 animate-pulse"></span>
             <span className="text-lg font-medium">Available for work</span>
           </div>
-          {/* Profile Image */}
-          <img
-            src="/profile.jpg"
-            alt="Profile"
-            className="w-28 h-28 rounded-full object-cover border-4 border-[#222] mb-4"
-            draggable="false"
-          />
-          {/* Social Icons */}
-          <div className="flex items-center gap-3 mb-4">
-            <a href="https://www.linkedin.com/in/jamleads" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-              <span className="sr-only">LinkedIn</span>
-              <Linkedin className="w-6 h-6 text-white/80 hover:text-white" />
-            </a>
-            <a href="https://x.com/adetunjijay" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
-              <span className="sr-only">X</span>
-              <X className="w-6 h-6 text-white/80 hover:text-white" />
-            </a>
-          </div>
-          {/* Not to brag, but.. */}
-          <div className="text-left w-full max-w-xs">
-            <h3 className="text-2xl font-semibold mb-2">Not to brag, but..</h3>
-            <p className="text-lg font-light leading-snug">
-              I’m dedicated to providing innovative, high-quality solutions that not only meet your goals but exceed your expectations.
-            </p>
+          {/* About me heading below available for work */}
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-10 leading-tight mt-4">About me</h1>
+          {/* Profile, Social, and Not to brag in a row on desktop, stacked on mobile */}
+          <div className="flex flex-col sm:flex-row items-center sm:items-start w-full gap-8 mb-4">
+            <img
+              src="/profile.jpg"
+              alt="Profile"
+              className="w-32 h-32 rounded-full object-cover border-4 border-[#222] mb-4 sm:mb-0 shadow-lg"
+              style={{ aspectRatio: '1/1' }}
+              draggable="false"
+            />
+            <div className="flex flex-col items-center sm:items-start gap-2 w-full">
+              {/* Social Icons */}
+              <div className="flex items-center gap-3 mb-2 sm:mb-3">
+                <a href="https://www.linkedin.com/in/jamleads" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                  <span className="sr-only">LinkedIn</span>
+                  <Linkedin className="w-6 h-6 text-white/80 hover:text-white" />
+                </a>
+                <a href="https://x.com/adetunjijay" target="_blank" rel="noopener noreferrer" className="hover:scale-110 transition-transform">
+                  <span className="sr-only">X</span>
+                  <X className="w-6 h-6 text-white/80 hover:text-white" />
+                </a>
+              </div>
+              {/* Not to brag, but.. */}
+              <div className="text-left w-full max-w-xs">
+                <h3 className="text-2xl font-semibold mb-2">Not to brag, but..</h3>
+                <p className="text-lg font-light leading-snug">
+                  I’m dedicated to providing innovative, high-quality solutions that not only meet your goals but exceed your expectations.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
         {/* Right Side */}
-        <div className="flex-1 flex flex-col justify-center items-start w-full">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold mb-8 sm:mb-10 leading-tight">About me</h1>
+        <div className="flex-1 flex flex-col justify-center items-start w-full mt-24">
           <div className="text-base sm:text-lg md:text-2xl font-light leading-relaxed max-w-full sm:max-w-2xl space-y-4 sm:space-y-6">
             <p className="mb-6">
               Hi, I'm Adetunji, an <span className="font-bold">IT PROJECT MANAGER</span> with over 6 years of experience in <span className="font-bold">SOFTWARE DEVELOPMENT</span>. I have a strong blend of technical expertise and I excel in leading initiatives that leverage innovative technology like AI &amp; ML to achieve business objectives and deliver impactful solutions

@@ -24,18 +24,18 @@ const StatsSection = () => {
   const marqueeStats = [...stats, ...stats];
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 sm:px-6 bg-card relative overflow-x-hidden">
+    <section ref={sectionRef} className="py-8 px-2 sm:px-4 bg-card relative overflow-x-hidden">
       <div className="container mx-auto">
         {/* Horizontal Marquee Stats Slider */}
         <div className="relative w-full flex items-center justify-center">
           <div className="stats-marquee whitespace-nowrap flex items-center w-full overflow-x-hidden">
             <div className="flex animate-stats-marquee">
               {marqueeStats.map((stat, idx) => (
-                <div key={idx} className="flex items-center justify-center min-w-[320px] px-8">
-                  <span className="text-5xl lg:text-6xl font-bold text-primary">
+                <div key={idx} className="flex items-center justify-center min-w-[120px] px-2 py-1">
+                  <span className="text-3xl lg:text-4xl font-bold text-primary">
                     {stat.value}
                   </span>
-                  <span className="ml-3 text-muted-foreground font-medium tracking-wide text-base md:text-lg">
+                  <span className="ml-2 text-muted-foreground font-medium tracking-wide text-sm md:text-base">
                     {stat.label}
                   </span>
                   {/* 3D asterisk/star */}

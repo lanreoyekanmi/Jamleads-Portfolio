@@ -25,14 +25,14 @@ const TagsMarquee = () => {
   const marqueeTags = [...tags, ...tags];
 
   return (
-    <section ref={sectionRef} className="py-20 px-4 sm:px-6 bg-card relative overflow-x-hidden">
+    <section ref={sectionRef} className="py-8 px-2 sm:px-4 bg-card relative overflow-x-hidden">
       <div className="container mx-auto">
         {/* Horizontal Marquee Tags Slider */}
         <div className="relative w-full flex items-center justify-center">
           <div className="tags-marquee whitespace-nowrap flex items-center w-full overflow-x-hidden scrollbar-none" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             <div className="flex animate-stats-marquee">
               {marqueeTags.map((tag, idx) => (
-                <div key={idx} className="flex items-center justify-center min-w-[320px] px-8">
+                <div key={idx} className="flex items-center justify-center min-w-[200px] px-4 py-2">
                   <span className="text-2xl md:text-3xl font-bold text-white">
                     {tag.value}
                   </span>
