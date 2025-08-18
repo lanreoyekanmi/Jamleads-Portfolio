@@ -77,12 +77,9 @@ const Projects = () => {
                 data-aos="fade-up"
                 data-aos-delay={index * 150}
               >
-                    <h3 className="text-lg sm:text-2xl md:text-3xl font-light text-foreground mb-4 tracking-tight">
-                  {project.title}
-                </h3>
-                    <p className="text-sm sm:text-base text-muted-foreground mb-6">{project.description}</p>
+                {/* Title and description moved below video */}
                 <div className="w-full flex justify-center">
-                      <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3 max-w-5xl w-full">
+                  <div className="rounded-2xl overflow-hidden bg-card border border-border shadow-professional mb-3 max-w-5xl w-full">
                     <video
                       src={project.video}
                       autoPlay
@@ -99,6 +96,10 @@ const Projects = () => {
                     />
                   </div>
                 </div>
+                <h3 className="text-2xl sm:text-4xl md:text-5xl font-light text-foreground mb-4 tracking-tight ml-7">
+                  {project.title}
+                </h3>
+                <p className="text-base sm:text-lg md:text-xl text-muted-foreground mb-6 ml-7">{project.description}</p>
                 <div className="w-full flex justify-end">
                   <a
                     href={project.link}
