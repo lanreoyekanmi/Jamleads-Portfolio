@@ -30,16 +30,24 @@ const Certifications = () => {
   return (
     <section ref={sectionRef} className="py-16 px-4 sm:px-6 bg-background relative overflow-x-hidden">
       <div className="container mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-8 text-center text-white">Certifications</h2>
+        <div className="flex flex-col items-center justify-center mb-8">
+          <div className="flex items-center justify-center">
+            <span className="inline-block w-3 h-3 rounded-full bg-green-400 mr-2 animate-pulse"></span>
+            <span className="text-md font-medium text-white">Certifications</span>
+          </div>
+          <div className="mt-2">
+            <span className="block text-2xl sm:text-4xl font-bold text-white text-center">Certified By Industry Leaders</span>
+          </div>
+        </div>
         <div className="relative w-full flex items-center justify-center">
           <div className="certs-marquee whitespace-nowrap flex items-center w-full overflow-x-hidden scrollbar-none" style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}>
             <div className="flex animate-stats-marquee">
               {marqueeCertificates.map((cert, idx) => (
-                <div key={idx} className="flex flex-col items-center justify-center min-w-[420px] px-8">
+                <div key={idx} className="flex flex-col items-center justify-center min-w-[630px] px-8">
                   <img
                     src={cert.src}
                     alt=""
-                    className="w-full h-72 object-contain rounded-xl bg-white/80 shadow-xl"
+                    className="w-full h-[27rem] object-contain rounded-xl bg-white/80 shadow-xl"
                     loading="lazy"
                   />
                 </div>

@@ -136,8 +136,8 @@ const ProjectsSection = () => {
           ))}
           {/* Big green button as the third column */}
           <div className="flex flex-col justify-center items-center bg-[#7ED321] rounded-2xl min-h-[220px] h-full w-full col-span-1 mt-10" style={{ minHeight: '220px' }}>
-            <a
-              href="/projects"
+            <Link
+              to="/projects"
               className="flex items-center justify-center gap-3 text-gray-900 text-xl font-semibold font-manrope px-6 py-5 rounded-2xl w-full h-full transition-transform duration-200 ease-in-out hover:scale-95"
               style={{ minHeight: '220px' }}
             >
@@ -147,7 +147,7 @@ const ProjectsSection = () => {
                   <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
                 </svg>
               </span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>
